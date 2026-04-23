@@ -3,20 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naijei.com</title>
+    <title>Distributed Downloader</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header id="showcase">
-        <h1>Looking for games? Or old naijei.com?</h1>
-    </header>
-    <div id="content" class="container">
-        Well, Games are now on everygame66.com! Wohooo! Naijei.com will be back in about a month or so with a cooler and better features!
-    </div>
-    <a class="btn">everygame66.com</a>
-    <br>
-    <img src="1.png" alt="Image 2">
+    <main class="container">
+        <header class="hero">
+            <span class="status">Work in progress</span>
+            <h1>Distributed Downloader</h1>
+            <p class="tagline">A work-in-progress distributed file downloading system.</p>
+            <div class="actions">
+                <a class="btn btn-primary" href="https://github.com/CornellDataScience/distributed-downloader" target="_blank" rel="noopener">View on GitHub</a>
+                <a class="btn btn-ghost" href="#concepts">Learn more</a>
+            </div>
+        </header>
 
-</div>
+        <section class="about">
+            <h2>About</h2>
+            <p>
+                Distributed Downloader explores peer-to-peer file transfer, chunking,
+                and scalable download architecture. Instead of relying on a single
+                source, files are split into chunks and pulled in parallel from
+                multiple peers.
+            </p>
+            <p class="note">
+                Still early. Core pieces are being built out, and the design is
+                evolving as we test ideas.
+            </p>
+        </section>
+
+        <section id="concepts" class="concepts">
+            <h2>Technical ideas</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Peer-to-peer</h3>
+                    <p>Nodes share chunks directly with each other, reducing load on any single source.</p>
+                </div>
+                <div class="card">
+                    <h3>Chunking</h3>
+                    <p>Files are broken into smaller pieces so they can be fetched, verified, and reassembled independently.</p>
+                </div>
+                <div class="card">
+                    <h3>Parallel transfer</h3>
+                    <p>Multiple chunks download simultaneously across available peers to increase throughput.</p>
+                </div>
+                <div class="card">
+                    <h3>Distributed systems</h3>
+                    <p>Coordination, discovery, and fault tolerance across an unreliable network of participants.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="roadmap">
+            <h2>What's next</h2>
+            <ul>
+                <li>Benchmarks comparing single-source vs. distributed downloads</li>
+                <li>Diagrams of the chunk exchange protocol</li>
+                <li>Notes on peer discovery and failure handling</li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <a href="https://github.com/CornellDataScience/distributed-downloader" target="_blank" rel="noopener">
+                github.com/CornellDataScience/distributed-downloader
+            </a>
+        </footer>
+    </main>
 </body>
 </html>
